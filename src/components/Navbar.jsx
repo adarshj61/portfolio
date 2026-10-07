@@ -29,13 +29,11 @@ export default function Navbar() {
         <a
           href="#"
           onClick={handleLinkClick}
-          className="group flex items-center gap-3"
+          className="group flex items-center gap-3 "
           aria-label={`${PROFILE.name} - Home`}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#111111] text-[12px] font-extrabold tracking-tight text-white transition-all duration-200 group-hover:bg-blue-600 dark:bg-white dark:text-[#111111] dark:group-hover:bg-blue-600 dark:group-hover:text-white">
-            {PROFILE.shortName}
-          </span>
-          <span className="hidden text-[14px] font-bold tracking-tight text-[#111111] transition-colors dark:text-[#F5F5F5] sm:inline-block">
+         
+          <span className="hidden text-[14px] font-extrabold tracking-tight text-[#111111] transition-colors dark:text-[#F5F5F5] sm:inline-block">
             {PROFILE.name}
           </span>
         </a>
