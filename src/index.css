@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #F8F8F6;
+  color: #111111;
+  transition: background-color 200ms ease, color 200ms ease;
+  overflow-x: hidden;
+}
+
+html.dark body {
+  background-color: #111111;
+  color: #F5F5F5;
+}
+
+::selection {
+  background: #111111;
+  color: #ffffff;
+}
+
+html.dark ::selection {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* Ensure focus rings are clean and accessible */
+:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
